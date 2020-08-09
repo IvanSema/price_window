@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/daoua/front-end-developer-test-task#readme",
   "dependencies": {
+    "@types/react": "^16.9.45",
+    "@types/react-router": "^5.1.8",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

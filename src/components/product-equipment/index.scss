@@ -1,0 +1,132 @@
+$fontMain: "Roboto", sans-serif;
+$colorBase: #999;
+$colorChecked: #000;
+$colorSecondary: #6ca22c;
+
+.product-equipment {
+  max-width: 335px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
+  background: #fff;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: $colorBase;
+    font-family: $fontMain;
+    font-size: 16px;
+    line-height: 19px;
+
+    &--price {
+      &::after {
+        content: " грн";
+      }
+
+      &-checked {
+        color: $colorChecked;
+        font-weight: bold;
+      }
+    }
+
+    &--type {
+      &::after {
+        content: " г";
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + div {
+      border: 1px solid $colorSecondary;
+
+      &::before {
+        display: block;
+      }
+    }
+
+    &:checked ~ p {
+      color: $colorChecked;
+    }
+  }
+
+  &__input-btn {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid $colorBase;
+    position: relative;
+    margin: 0 16px 0 0;
+
+    &::before {
+      content: "";
+      display: none;
+      height: 8px;
+      width: 8px;
+      background-color: $colorSecondary;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+  }
+
+  &__value {
+    color: $colorChecked;
+    font-size: 24px;
+    font-family: $fontMain;
+    line-height: 28px;
+
+    &::after {
+      content: " грн";
+    }
+  }
+
+  &__footer-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    background: #6ca22c;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 5px 16px;
+    font-family: $fontMain;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    min-height: 48px;
+    margin: 0 0 0 16px;
+  }
+
+  &__btn p{
+      display: block;
+      margin: 0 0 0 8px;
+  }
+
+  &__svg{
+      display: block;
+  }
+
+}
