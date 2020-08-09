@@ -14,6 +14,17 @@ $colorSecondary: #6ca22c;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+
+    &:hover .product-equipment__price .product-equipment__input-btn, &:hover .product-equipment__price .product-equipment__text, &:hover .product-equipment__text{
+      border-color: darken($colorSecondary, 10);
+      color: darken(#000, 10);
+
+      &:before{
+        display: block;
+        background-color: darken($colorSecondary, 10);
+      }
+    }
   }
 
   &__price {
@@ -103,7 +114,7 @@ $colorSecondary: #6ca22c;
   &__btn {
     display: flex;
     align-items: center;
-    background: #6ca22c;
+    background-color: $colorSecondary;
     border-radius: 8px;
     outline: none;
     border: none;
@@ -118,6 +129,10 @@ $colorSecondary: #6ca22c;
     letter-spacing: 1px;
     min-height: 48px;
     margin: 0 0 0 16px;
+
+    &:hover, &:focus{
+      background-color: darken($colorSecondary, 10)
+    }
   }
 
   &__btn p{

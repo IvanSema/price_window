@@ -18,6 +18,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+}
+
+.product-equipment__item:hover .product-equipment__price .product-equipment__input-btn, .product-equipment__item:hover .product-equipment__price .product-equipment__text, .product-equipment__item:hover .product-equipment__text {
+  border-color: #517a21;
+  color: black;
+}
+
+.product-equipment__item:hover .product-equipment__price .product-equipment__input-btn:before, .product-equipment__item:hover .product-equipment__price .product-equipment__text:before, .product-equipment__item:hover .product-equipment__text:before {
+  display: block;
+  background-color: #517a21;
 }
 
 .product-equipment__price {
@@ -118,7 +129,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #6ca22c;
+  background-color: #6ca22c;
   border-radius: 8px;
   outline: none;
   border: none;
@@ -133,6 +144,10 @@
   letter-spacing: 1px;
   min-height: 48px;
   margin: 0 0 0 16px;
+}
+
+.product-equipment__btn:hover, .product-equipment__btn:focus {
+  background-color: #517a21;
 }
 
 .product-equipment__btn p {
